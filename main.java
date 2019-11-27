@@ -14,7 +14,7 @@ public class Main
 		System.out.println(convert(133456789.159));
 	}
 	
-	public static String convert(double rupees){
+	public static String convert(String rupees){
 		BigDecimal rup = new BigDecimal(rupees);
         	long rupee = rup.longValue();
         	int paisa = (int) (rup.subtract(rup.setScale(0, RoundingMode.FLOOR)).floatValue() * 100);
